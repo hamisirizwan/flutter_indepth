@@ -37,8 +37,8 @@ class _AccountPageState extends State<AccountPage> {
             label: 'Account',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications_active),
-            label: 'Notifications',
+            icon: Icon(Icons.list),
+            label: 'ListFetch',
           ),
         ],
         currentIndex: _selectedIndex,
