@@ -13,11 +13,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-//  dynamic Future<Album> futureAlbum;
+//state to hold future album instance
+
   late Future<Album> futureAlbum;
+  //called on page load and updates our album state
   @override
   void initState() {
     super.initState();
+    //sets the album to the response of our fetch
     futureAlbum = fetchAlbum();
   }
 
@@ -73,6 +76,8 @@ class _HomePageState extends State<HomePage> {
               //   child: const Text("GET DATA"),
               // ),
               Container(
+                //future builder after the call
+
                 child: FutureBuilder<Album>(
                   future: futureAlbum,
                   builder: (context, snapshot) {
