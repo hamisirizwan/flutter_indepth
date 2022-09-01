@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testing/pages/akili_members.dart';
 import 'package:testing/pages/notication_page.dart';
 
 class AccountPage extends StatefulWidget {
@@ -19,6 +20,11 @@ class _AccountPageState extends State<AccountPage> {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const NotificationPage()),
+      );
+    }else  if (_selectedIndex == 1) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const AkiliMembersPage()),
       );
     }
   }
